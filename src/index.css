@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{background-color: #151515;
+}
+body::-webkit-scrollbar{width: 3px;}
+body::-webkit-scrollbar-thumb{background-color: orange;}
+
+/* clases agregadas con js */
+.menuBoton.abrirMenu .menuBoton-btn{
+    transform: translateX(-50px);
+    background: transparent;
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transition: transform .3s ease-out;
+}
+.menuBoton.abrirMenu .menuBoton-btn::before{
+    transition: transform .3s ease-out;
+    transform: rotate(45deg) translate(35px, -35px);
+    -webkit-transform: rotate(45deg) translate(35px, -35px);
+    -moz-transform: rotate(45deg) translate(35px, -35px);
+    -ms-transform: rotate(45deg) translate(35px, -35px);
+    -o-transform: rotate(45deg) translate(35px, -35px);
+    -webkit-transition: transform .3s ease-out;
+    -moz-transition: transform .3s ease-out;
+    -ms-transition: transform .3s ease-out;
+    -o-transition: transform .3s ease-out;
+}
+.menuBoton.abrirMenu .menuBoton-btn::after{
+    transition: transform .3s ease-out;
+    transform: rotate(-45deg) translate(35px, 35px);
+    -webkit-transform: rotate(-45deg) translate(35px, 35px);
+    -moz-transform: rotate(-45deg) translate(35px, 35px);
+    -ms-transform: rotate(-45deg) translate(35px, 35px);
+    -o-transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.contenedorProyectos:hover .proyectosImagenes{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    
+}
+
+.titulos::before{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    
+}
+
+.pulse:hover{
+    box-shadow: 0 0 0 1em transparent;
+    animation: pulse 1s linear infinite;
+    -webkit-animation: pulse 1s linear infinite;
+}
+@keyframes pulse{
+    0%{box-shadow: 0 0 #ff7707;}
+}
